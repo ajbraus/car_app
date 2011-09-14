@@ -1,0 +1,57 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :priorities_mask %><br />
+    <%= f.text_field :priorities_mask %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :invoice_remarks %><br />
+    <%= f.text_area :invoice_remarks %>
+  </div>
+  <div class="field">
+    <%= f.label :technician %><br />
+    <%= f.text_field :technician %>
+  </div>
+  <div class="field">
+    <%= f.label :date_needed %><br />
+    <%= f.date_select :date_needed %>
+  </div>
+  <div class="field">
+    <%= f.label :time_needed %><br />
+    <%= f.time_select :time_needed %>
+  </div>
+  <div class="field">
+    <%= f.label :waiting %><br />
+    <%= f.check_box :waiting %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle %><br />
+    <%= f.text_field :vehicle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

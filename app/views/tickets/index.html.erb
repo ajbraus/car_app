@@ -1,0 +1,41 @@
+<h1>Listing tickets</h1>
+
+<table>
+  <tr>
+    <th>Priority</th>
+    <th>Priorities mask</th>
+    <th>State</th>
+    <th>Notes</th>
+    <th>Invoice remarks</th>
+    <th>Technician</th>
+    <th>Date needed</th>
+    <th>Time needed</th>
+    <th>Waiting</th>
+    <th>Vehicle</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tickets.each do |ticket| %>
+  <tr>
+    <td><%= ticket.priority %></td>
+    <td><%= ticket.priorities_mask %></td>
+    <td><%= ticket.state %></td>
+    <td><%= ticket.notes %></td>
+    <td><%= ticket.invoice_remarks %></td>
+    <td><%= ticket.technician %></td>
+    <td><%= ticket.date_needed %></td>
+    <td><%= ticket.time_needed %></td>
+    <td><%= ticket.waiting %></td>
+    <td><%= ticket.vehicle %></td>
+    <td><%= link_to 'Show', ticket %></td>
+    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+    <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ticket', new_ticket_path %>

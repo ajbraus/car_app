@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>State:</b>
+  <%= @appointment.state %>
+</p>
+
+<p>
+  <b>Expected time:</b>
+  <%= @appointment.expected_time %>
+</p>
+
+<p>
+  <b>Arrived time:</b>
+  <%= @appointment.arrived_time %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @appointment.notes %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @appointment.vehicle %>
+</p>
+
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

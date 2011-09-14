@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Priority:</b>
+  <%= @ticket.priority %>
+</p>
+
+<p>
+  <b>Priorities mask:</b>
+  <%= @ticket.priorities_mask %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @ticket.state %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @ticket.notes %>
+</p>
+
+<p>
+  <b>Invoice remarks:</b>
+  <%= @ticket.invoice_remarks %>
+</p>
+
+<p>
+  <b>Technician:</b>
+  <%= @ticket.technician %>
+</p>
+
+<p>
+  <b>Date needed:</b>
+  <%= @ticket.date_needed %>
+</p>
+
+<p>
+  <b>Time needed:</b>
+  <%= @ticket.time_needed %>
+</p>
+
+<p>
+  <b>Waiting:</b>
+  <%= @ticket.waiting %>
+</p>
+
+<p>
+  <b>Vehicle:</b>
+  <%= @ticket.vehicle %>
+</p>
+
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
